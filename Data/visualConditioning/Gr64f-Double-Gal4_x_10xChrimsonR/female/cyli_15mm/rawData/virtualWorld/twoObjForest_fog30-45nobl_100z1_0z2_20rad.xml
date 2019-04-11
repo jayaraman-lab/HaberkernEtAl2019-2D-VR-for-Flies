@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flyover_configuration major_version="2" minor_version="8">
+    <display number_of_displays="2" starting_display="2" frame_packing="false"/>
+    <remote_data_connection hostname="localhost" port="22222" num_retries="3" gang_motion_and_blanking="false"/>
+    <lighting ambient="#191919" diffuse="#191919" diffuse_intensity="10" background="#000000" shading_method="osg_default">
+        <fog enabled="true" radial="true" mode="linear" color="#ffffff" density="0.05" start="30" end="45"/>
+    </lighting>
+    <calibration x_calib="-327" y_calib="-400" z_calib="400" x_gain="1" y_gain="1" z_gain="1"/>
+    <configuration ball_radius="4.525" use_rotated_cameras="true" use_custom_matrices="true" edit_per_camera="true"/>
+    <reinforcement min_value="0" inner_radius="0" outer_radius="10" gamma_exponent="1" max_value="0">
+        <reinforcement_category name="" inner_radius="0" outer_radius="10" gamma_exponent="1" inner_value="0" loitering_radius="5" loitering_timeout="100" duration="0" reset_radius_offset="0"/>
+        <reinforcement_category name="1" inner_radius="0" outer_radius="20" gamma_exponent="1" inner_value="100" loitering_radius="5" loitering_timeout="100" duration="0" reset_radius_offset="0"/>
+        <reinforcement_category name="2" inner_radius="0" outer_radius="30" gamma_exponent="1" inner_value="0" loitering_radius="5" loitering_timeout="100" duration="0" reset_radius_offset="0"/>
+    </reinforcement>
+    <respawn radius="7" timeout="30"/>
+    <smoothing_enabled velocity="false" input="false" intermediary="false" output="false"/>
+    <smoothing_interval velocity="32" input="32" intermediary="32" output="32"/>
+    <output port_name="COM4" rate="60"/>
+    <cameras screen_width="95" screen_height="182" gang_cameras="false" x_center_distorts_in_y="false">
+        <camera id="1" global_brightness="#ffffff">
+            <frustum left="-0.221419" right="0.211976" bottom="-0.415906" top="0.414385" near="0.1" far="10000" aperture="1.13829" distance="21.92" screen_distance="62.8063" eye_sep="1.03494" shift_left="false" use_matrix="true">
+                <matrix e00="0.461474" e01="0" e02="0" e03="0" e10="0" e11="0.240879" e12="0" e13="0" e20="-0.538526" e21="0.3334" e22="-1.00002" e23="-1" e30="0" e31="0" e32="-0.200002" e33="0"/>
+            </frustum>
+            <distortion enabled="false">
+                <horizontal_blanking lower="0" upper="720"/>
+                <focal_length x="100" y="100"/>
+                <center x="50" y="50"/>
+                <graph rows="4" cols="4">
+                    <control_point i="0" j="0" x="-200" y="-200"/>
+                    <control_point i="0" j="1" x="-66.6667" y="-200"/>
+                    <control_point i="0" j="2" x="66.6667" y="-200"/>
+                    <control_point i="0" j="3" x="200" y="-200"/>
+                    <control_point i="1" j="0" x="-200" y="-66.6667"/>
+                    <control_point i="1" j="1" x="-66.6667" y="-66.6667"/>
+                    <control_point i="1" j="2" x="66.6667" y="-66.6667"/>
+                    <control_point i="1" j="3" x="200" y="-66.6667"/>
+                    <control_point i="2" j="0" x="-200" y="66.6667"/>
+                    <control_point i="2" j="1" x="-66.6667" y="66.6667"/>
+                    <control_point i="2" j="2" x="66.6667" y="66.6667"/>
+                    <control_point i="2" j="3" x="200" y="66.6667"/>
+                    <control_point i="3" j="0" x="-200" y="200"/>
+                    <control_point i="3" j="1" x="-66.6667" y="200"/>
+                    <control_point i="3" j="2" x="66.6667" y="200"/>
+                    <control_point i="3" j="3" x="200" y="200"/>
+                </graph>
+            </distortion>
+        </camera>
+        <camera id="2" global_brightness="#ffffff">
+            <frustum left="0.734029" right="1.16742" bottom="-0.415906" top="0.414385" near="0.1" far="10000" aperture="0.0249751" distance="21.92" screen_distance="62.8063" eye_sep="-208.399" shift_left="true" use_matrix="true">
+                <matrix e00="0.461474" e01="0" e02="0" e03="0" e10="0" e11="0.240879" e12="0" e13="0" e20="0.538526" e21="0.3334" e22="-1.00002" e23="-1" e30="0" e31="0" e32="-0.200002" e33="0"/>
+            </frustum>
+            <distortion enabled="false">
+                <horizontal_blanking lower="0" upper="720"/>
+                <focal_length x="100" y="100"/>
+                <center x="50" y="50"/>
+                <graph rows="4" cols="4">
+                    <control_point i="0" j="0" x="-200" y="-200"/>
+                    <control_point i="0" j="1" x="-66.6667" y="-200"/>
+                    <control_point i="0" j="2" x="66.6667" y="-200"/>
+                    <control_point i="0" j="3" x="200" y="-200"/>
+                    <control_point i="1" j="0" x="-200" y="-66.6667"/>
+                    <control_point i="1" j="1" x="-66.6667" y="-66.6667"/>
+                    <control_point i="1" j="2" x="66.6667" y="-66.6667"/>
+                    <control_point i="1" j="3" x="200" y="-66.6667"/>
+                    <control_point i="2" j="0" x="-200" y="66.6667"/>
+                    <control_point i="2" j="1" x="-66.6667" y="66.6667"/>
+                    <control_point i="2" j="2" x="66.6667" y="66.6667"/>
+                    <control_point i="2" j="3" x="200" y="66.6667"/>
+                    <control_point i="3" j="0" x="-200" y="200"/>
+                    <control_point i="3" j="1" x="-66.6667" y="200"/>
+                    <control_point i="3" j="2" x="66.6667" y="200"/>
+                    <control_point i="3" j="3" x="200" y="200"/>
+                </graph>
+            </distortion>
+        </camera>
+    </cameras>
+</flyover_configuration>
