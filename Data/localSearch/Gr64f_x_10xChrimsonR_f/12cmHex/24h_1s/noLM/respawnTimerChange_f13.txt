@@ -1,0 +1,2 @@
+Changed respawn timer from 30 s to 60 s from fly f13 onward, due to frequent teleporation that might interrupt local search.
+Repawn radius unchanged at 7 mm.
